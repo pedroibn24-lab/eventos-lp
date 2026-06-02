@@ -177,25 +177,6 @@ section.block{padding:84px 0}
 .course-body .btn{margin-top:8px;align-self:flex-start;padding:13px 26px;font-size:.95rem}
 @media(max-width:760px){.course-grid{grid-template-columns:1fr}}
 
-/* ---------- testimonials ---------- */
-.testi{background:var(--dark);color:#fff;overflow:hidden}
-.testi .eyebrow{color:var(--orange)}
-.testi .section-title{color:#fff}
-.testi .section-sub{color:oklch(0.82 0.01 70)}
-.testi-head{text-align:center;display:flex;flex-direction:column;align-items:center;margin-bottom:42px}
-.testi-head .section-sub{margin-inline:auto;text-align:center}
-.testi-track{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.testi-card{
-  background:oklch(1 0 0 / 0.05);border:1px solid oklch(1 0 0 / 0.1);border-radius:18px;padding:26px;
-  display:flex;flex-direction:column;gap:16px;
-}
-.stars{color:var(--orange);letter-spacing:2px;font-size:1rem}
-.testi-card p{color:oklch(0.92 0.01 70);font-size:1rem;line-height:1.6}
-.testi-person{display:flex;align-items:center;gap:12px;margin-top:auto}
-.avatar{width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--orange),var(--orange-strong));display:grid;place-items:center;font-family:'Montserrat';font-weight:800;color:#fff}
-.testi-person .name{font-weight:700;font-size:.98rem}
-.testi-person .meta{color:oklch(0.72 0.01 70);font-size:.82rem}
-@media(max-width:860px){.testi-track{grid-template-columns:1fr;max-width:480px;margin:0 auto}}
 
 /* ---------- form ---------- */
 .form-section{background:linear-gradient(165deg,var(--orange-soft),var(--bg-warm));padding:84px 0}
