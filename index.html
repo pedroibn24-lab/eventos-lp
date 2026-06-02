@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Educação que transforma vidas — Anhanguera</title>
 <meta name="description" content="Condições exclusivas em graduação e pós-graduação. Garanta seu desconto no evento." />
+<!-- Security headers -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https://script.google.com https://script.googleusercontent.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'; form-action 'self';" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -230,7 +233,9 @@
               <span class="err">Selecione uma modalidade.</span>
             </div>
             <button type="submit" class="btn" id="submitBtn">Garantir meu brinde</button>
-            <p class="form-disclaimer">Ao enviar, você concorda com nossa <a href="#" target="_blank" rel="noopener">Política de Privacidade</a>. Dados protegidos e nunca compartilhados.</p>
+            <!-- honeypot anti-spam: bots preenchem, humanos não -->
+            <input type="text" name="website" id="hp_website" autocomplete="off" tabindex="-1" aria-hidden="true" style="display:none!important;position:absolute;left:-9999px;width:0;height:0" />
+            <p class="form-disclaimer">Ao enviar, você concorda com nossa <a href="#" target="_blank" rel="noopener noreferrer">Política de Privacidade</a>. Dados protegidos e nunca compartilhados.</p>
           </form>
         </div>
         <div class="form-success">

@@ -20,6 +20,17 @@ const SHEET_ENDPOINT = "";
   const card = document.getElementById('formCard');
   const btn  = document.getElementById('submitBtn');
 
+  // Sanitiza texto: remove caracteres que causam injeção em planilhas e XSS
+  function sanitize(val){
+    return String(val).trim()
+      .replace(/[<>"'`]/g, '')          // XSS básico
+      .replace(/^[=+\-@\t\r]/g, '');    // injeção de fórmula em planilha
+  }
+
+  // Rate limiting: impede reenvio em menos de 30 s
+  let lastSubmit = 0;
+  const RATE_MS = 30000;
+
   // WhatsApp mask
   const wpp = document.getElementById('whatsapp');
   wpp.addEventListener('input', function(){
@@ -51,15 +62,32 @@ const SHEET_ENDPOINT = "";
 
   form.addEventListener('submit', async function(e){
     e.preventDefault();
+
+    // Honeypot: se preenchido, é bot
+    if(document.getElementById('hp_website')?.value) return;
+
+    // Rate limiting
+    const now = Date.now();
+    if(now - lastSubmit < RATE_MS) return;
+
     if(!validate()){
       form.querySelector('.field.invalid input,.field.invalid select')?.focus();
       return;
     }
-    const data = Object.fromEntries(new FormData(form).entries());
+
+    const raw = Object.fromEntries(new FormData(form).entries());
+
+    // Sanitiza cada campo antes de enviar
+    const data = {};
+    for(const key of Object.keys(raw)){
+      if(key === 'website') continue; // descarta honeypot
+      data[key] = sanitize(raw[key]);
+    }
     data.dataHora = new Date().toLocaleString('pt-BR');
     data.origem   = 'Landing Evento';
 
     btn.disabled = true;
+    lastSubmit = Date.now();
     const original = btn.textContent;
     btn.textContent = 'Enviando...';
 
