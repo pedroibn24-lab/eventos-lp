@@ -1,19 +1,4 @@
-/* ============================================================
-   ENVIO PARA A PLANILHA
-   ------------------------------------------------------------
-   Cole abaixo a URL do seu Web App do Google Apps Script
-   (ou de outro serviço que receba os dados). Enquanto estiver
-   vazio, o formulário apenas mostra a mensagem de sucesso.
-
-   Como gerar a URL (Google Sheets):
-   1. Na sua planilha: Extensões > Apps Script
-   2. Cole um script doPost(e) que grava e.parameter na planilha
-   3. Implantar > Nova implantação > App da Web
-      - Executar como: Eu
-      - Quem tem acesso: Qualquer pessoa
-   4. Copie a URL gerada e cole entre as aspas abaixo.
-   ============================================================ */
-const SHEET_ENDPOINT = "";
+const SHEET_ENDPOINT = "https://script.google.com/macros/s/AKfycbyHvIGZqoLDvgyGcrxPZSSP915CGnx7L54BDE9opBIojZbEVXU9K9EHxDJWTJ7cavdt/exec";
 
 (function(){
   const form = document.getElementById('leadForm');
@@ -83,8 +68,7 @@ const SHEET_ENDPOINT = "";
       if(key === 'website') continue; // descarta honeypot
       data[key] = sanitize(raw[key]);
     }
-    data.dataHora = new Date().toLocaleString('pt-BR');
-    data.origem   = 'Landing Evento';
+    data.dataHora = new Date().toLocaleString('pt-BR', {timeZone:'America/Sao_Paulo'});
 
     btn.disabled = true;
     lastSubmit = Date.now();
