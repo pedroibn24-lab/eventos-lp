@@ -58,7 +58,7 @@ header{
 .nav{display:flex;align-items:center;justify-content:space-between;height:66px}
 .logo{display:flex;align-items:center;gap:10px;color:#fff;font-family:'Montserrat';font-weight:800;font-size:1.18rem;letter-spacing:-0.01em}
 .logo .mark{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--orange),var(--orange-strong));display:grid;place-items:center;font-size:1.1rem;color:#fff;font-weight:900}
-.logo-img{height:48px;width:auto;display:block}
+.logo-img{height:44px;max-height:44px;width:auto;max-width:150px;object-fit:contain;display:block}
 .nav-links{display:flex;gap:30px;align-items:center}
 .nav-links a{color:oklch(0.92 0.01 70);font-weight:600;font-size:.95rem;transition:color .15s}
 .nav-links a:hover{color:var(--orange)}
