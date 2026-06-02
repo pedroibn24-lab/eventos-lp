@@ -226,14 +226,6 @@ footer{background:var(--dark);color:oklch(0.8 0.01 70);padding:46px 0 34px}
 .foot-links a:hover{color:var(--orange)}
 .foot-copy{font-size:.82rem;color:oklch(0.6 0.01 70)}
 
-/* sticky mobile cta */
-.mobile-cta{
-  position:fixed;left:0;right:0;bottom:0;z-index:60;padding:12px 16px;
-  background:oklch(0.20 0.018 50 / 0.96);backdrop-filter:blur(8px);border-top:1px solid oklch(1 0 0 / 0.1);
-  display:none;
-}
-.mobile-cta .btn{width:100%}
-@media(max-width:860px){.mobile-cta{display:block}body{padding-bottom:74px}}
 
 /* reveal on scroll */
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease, transform .6s ease}
