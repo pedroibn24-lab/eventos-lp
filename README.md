@@ -1,5 +1,7 @@
 # Landing Page — Anhanguera
 
+> **Uso exclusivo IBN — Instituto Brasileiro de Negócios** — este repositório é propriedade da IBN e seu uso, cópia ou distribuição sem autorização é expressamente proibido.
+
 Landing page de captação de leads para eventos presenciais da Anhanguera. O objetivo é converter visitantes em cadastros qualificados, que são atendidos pelo WhatsApp em até 24h com uma proposta de matrícula personalizada.
 
 ## Estrutura
