@@ -4,6 +4,16 @@
 
 Landing page de captação de leads para eventos presenciais da Anhanguera. O objetivo é converter visitantes em cadastros qualificados, que são atendidos pelo WhatsApp em até 24h com uma proposta de matrícula personalizada.
 
+## Tecnologias
+
+- **HTML5** — estrutura semântica da página
+- **CSS3** — estilização, animações e responsividade (mobile-first)
+- **JavaScript (Vanilla)** — interatividade, validação de formulário, rate limiting e envio via `fetch`
+- **Google Apps Script** — backend serverless para receber e gravar leads na planilha
+- **Google Sheets** — armazenamento dos leads captados
+- **GitHub Actions** — CI/CD para deploy automático na branch `main`
+- **FTP Deploy (cPanel)** — entrega dos arquivos no servidor de hospedagem
+
 ## Seções da página
 
 - **Barra de urgência** — alerta de vagas limitadas fixado no topo
