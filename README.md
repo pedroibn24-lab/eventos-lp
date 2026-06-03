@@ -1,22 +1,8 @@
-# Landing Page — Anhanguera
+# Landing Page 
 
 > **Uso exclusivo IBN — Instituto Brasileiro de Negócios** — este repositório é propriedade da IBN e seu uso, cópia ou distribuição sem autorização é expressamente proibido.
 
 Landing page de captação de leads para eventos presenciais da Anhanguera. O objetivo é converter visitantes em cadastros qualificados, que são atendidos pelo WhatsApp em até 24h com uma proposta de matrícula personalizada.
-
-## Estrutura
-
-```
-/
-├── index.html              # Página principal
-├── legal.html              # Política de privacidade
-├── style.css               # Estilos
-├── script.js               # Máscara de telefone, validação e envio do formulário
-├── assets/                 # Imagens e logos
-├── apps-script/
-│   └── form-handler.gs     # Script do Google Apps Script (backend do formulário)
-└── .github/workflows/      # Deploy automático via FTP
-```
 
 ## Seções da página
 
