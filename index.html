@@ -27,7 +27,7 @@
       <a href="#beneficios">Benefícios</a>
       <a href="#cursos">Graduação e Pós</a>
     </nav>
-    <a href="#formulario" class="btn">Garantir —</a>
+    <a href="#formulario" class="btn">Garantir prêmio</a>
   </div>
 </header>
 
@@ -40,7 +40,7 @@
         <h1>Educação que <em>transforma</em> carreiras.</h1>
         <p class="lead">Aproveite condições únicas em graduação e pós-graduação reconhecidas pelo MEC, com mensalidades que cabem no seu orçamento.</p>
         <div class="hero-cta">
-          <a href="#formulario" class="btn">Garantir —</a>
+          <a href="#formulario" class="btn">Garantir prêmio</a>
           <a href="#cursos" class="btn btn-ghost">Ver cursos</a>
         </div>
 
@@ -109,7 +109,7 @@
         <div class="course-body">
           <h3>Graduação</h3>
           <p>Mais de 100 cursos de bacharelado, licenciatura e tecnólogo com condição exclusiva do evento.</p>
-          <a href="#formulario" class="btn">Garantir —</a>
+          <a href="#formulario" class="btn">Garantir prêmio</a>
         </div>
       </article>
       <article class="course-card reveal">
@@ -120,7 +120,7 @@
         <div class="course-body">
           <h3>Pós-Graduação</h3>
           <p>Especializações e MBAs com reconhecimento nacional para acelerar a sua carreira.</p>
-          <a href="#formulario" class="btn">Garantir —</a>
+          <a href="#formulario" class="btn">Garantir prêmio</a>
         </div>
       </article>
     </div>
@@ -133,7 +133,7 @@
     <div class="form-shell">
       <div class="form-copy reveal">
         <span class="eyebrow">Cadastro gratuito</span>
-        <h2 class="section-title">Garanta —</h2>
+        <h2 class="section-title">Garanta seu prêmio</h2>
         <p>Preencha o cadastro e nossa equipe entrará em contato pelo WhatsApp em até <strong>24 horas</strong> com uma proposta exclusiva para você.</p>
         <ul class="form-perks">
           <li><span class="ck">✓</span> Atendimento personalizado</li>
@@ -170,18 +170,28 @@
               <span class="err">Informe um e-mail válido.</span>
             </div>
             <div class="field">
-              <label for="ensinoMedio">Concluiu o Ensino Médio? <span class="req">*</span></label>
+              <label for="ensinoMedio">Qual seu grau de escolaridade? <span class="req">*</span></label>
               <select id="ensinoMedio" name="ensinoMedio" required>
                 <option value="" disabled selected>Selecione</option>
-                <option value="Sim">Sim</option>
-                <option value="Não">Não</option>
+                <option value="Ensino Fundamental Completo">Ensino Fundamental Completo</option>
+                <option value="Ensino Médio Incompleto">Ensino Médio Incompleto</option>
+                <option value="Ensino Médio Completo">Ensino Médio Completo</option>
+                <option value="Ensino Superior Incompleto">Ensino Superior Incompleto</option>
+                <option value="Ensino Superior Completo">Ensino Superior Completo</option>
+                <option value="Pós-Graduação / MBA">Pós-Graduação / MBA</option>
+                <option value="Mestrado ou Doutorado">Mestrado ou Doutorado</option>
               </select>
               <span class="err">Selecione uma opção.</span>
             </div>
             <div class="field">
-              <label for="curso">Curso pretendido <span class="req">*</span></label>
-              <input type="text" id="curso" name="curso" placeholder="Ex: Administração, Enfermagem..." required />
-              <span class="err">Informe o curso de interesse.</span>
+              <label for="curso">Você tem interesse em fazer ensino superior? <span class="req">*</span></label>
+              <select id="curso" name="curso" required>
+                <option value="" disabled selected>Selecione</option>
+                <option value="Sim">Sim</option>
+                <option value="Não">Não</option>
+                <option value="Já fiz, mas pretendo fazer outro">Já fiz, mas pretendo fazer outro</option>
+              </select>
+              <span class="err">Selecione uma opção.</span>
             </div>
             <div class="field">
               <label for="modalidade">Modalidade <span class="req">*</span></label>
@@ -193,14 +203,14 @@
               <span class="err">Selecione uma modalidade.</span>
             </div>
             <div class="field">
-              <label for="evento">Em qual evento você conseguiu o bônus? <span class="req">*</span></label>
+              <label for="evento">Em qual evento você conseguiu o prêmio? <span class="req">*</span></label>
               <select id="evento" name="evento" required>
                 <option value="" disabled selected>Selecione o evento</option>
                 <option value="Paróquia">Paróquia</option>
               </select>
               <span class="err">Selecione o evento.</span>
             </div>
-            <button type="submit" class="btn" id="submitBtn">Garantir —</button>
+            <button type="submit" class="btn" id="submitBtn">Garantir prêmio</button>
             <!-- honeypot anti-spam: bots preenchem, humanos não -->
             <input type="text" name="website" id="hp_website" autocomplete="off" tabindex="-1" aria-hidden="true" style="display:none!important;position:absolute;left:-9999px;width:0;height:0" />
             <p class="form-disclaimer">Ao enviar, você concorda com nossa <a href="legal.html" target="_blank" rel="noopener noreferrer">Política de Privacidade</a>. Dados protegidos e nunca compartilhados.</p>
