@@ -41,13 +41,6 @@ O código do script está versionado em [apps-script/form-handler.gs](apps-scrip
 3. Publique como **Web App** → acesso para "Qualquer pessoa".
 4. Copie a URL gerada e atualize a constante `APPS_SCRIPT_URL` em `script.js`.
 
-## Deploy
 
-O deploy é automático via GitHub Actions sempre que há push na branch `main`. Os arquivos são enviados por FTP para o servidor cPanel.
-
-**Secrets necessários no repositório:**
-- `FTP_SERVER`
-- `FTP_USERNAME`
-- `FTP_PASSWORD`
 
 
